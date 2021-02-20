@@ -1,0 +1,15 @@
+/cmake-build-*
+/.idea
+/libelfexample/
+/CMakeCache.txt
+/CMakeFiles/
+/Makefile
+/cmake_install.cmake
+/elfpatch
+elfpatcher.cbp
+playground/output.png
+playground/brc.code.1
+playground/calltrace*
+__pycache__
+build/
+client/out.bin

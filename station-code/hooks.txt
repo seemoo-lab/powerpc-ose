@@ -1,0 +1,13 @@
+# each line:
+# <PRE|POST|REPLACE> <symbol|0x address> <dstsymbol>
+#  ^                  ^                ^- destination symbol in the compiled elf
+#  |                   `- symbol (name) or address (0x prefixed) in the original elf
+#   `- what to do:
+#       - PRE: prehook, call dstsymbol and then the original symbol
+#       - POST: posthook, call the original symbol and then dstsymbol
+#       - REPLACE: only call dstsymbol
+
+#REPLACE lapd_* calltrace  #removed calltrace since it contains a lot of OSE-specific hooks
+
+#PRE printf pre_printf
+#POST printf post_printf
