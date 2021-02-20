@@ -55,7 +55,7 @@ This script runs cmake to generate a Makefile,
 compiles the utility and creates a symlink `elfpatch` in the repository root directory.
 
 
-## Building a customized firmware `ELF`
+## Building a customized firmware ELF
 
 At first, initial preparation steps are needed:
 
@@ -96,6 +96,10 @@ Different PowerPC-based firmware might need different names and approaches here.
 **The original firmware `tbrc_ram.elf` is not included in this repository!**
 If you have the original base station and this file, you can use our binary patcher at
 your own risk. This should only be done for testing and never in a production environment.
+
+The public release only contains the `execaddr` patch, which allows to execute a
+function at a given address with arguments from the serial command line interface.
+All other patches are removed, since they expose a lot of internal firmware functionality.
 
 
 ## Creating new interfaces to firmware functions

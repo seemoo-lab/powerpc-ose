@@ -1,3 +1,8 @@
+/*
+ This patch extends the base radio command line interface.
+ It can now call a function at a given address with arguments of various types.
+*/
+
 #include "../include/symbols.h"
 #include "exaddr.h"
 
