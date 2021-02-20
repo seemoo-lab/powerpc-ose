@@ -57,6 +57,8 @@ compiles the utility and creates a symlink `elfpatch` in the repository root dir
 
 ## Building a customized firmware `ELF`
 
+At first, initial preparation steps are needed:
+
 ```
 # create symlink to your firmware
 cd station-code
@@ -66,7 +68,10 @@ ln -s /tmp/original_firmware.elf tbrc_ram.elf
 cd include
 ./genAddressInclude.sh ../tbrc_ram.elf
 cd ..
+```
 
+Custom firmware can then be build as follows:
+```
 # build the firmware (within `station-code`)
 make
 
